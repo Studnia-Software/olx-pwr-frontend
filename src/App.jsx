@@ -4,7 +4,6 @@ function App() {
 
     return (
         <>
-            <h1>olx-pwr</h1>
         </>
     )
 }
