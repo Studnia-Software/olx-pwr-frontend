@@ -1,34 +1,26 @@
 import styles from "./Navigation.module.scss"
-import CSSModules from "react-css-modules";
 import PropTypes from "prop-types";
+import Button from "../global/Button/Button.jsx";
 
-const navElements = [
-    {
-        changeContentTo: "Button1",
-        icon: null,
-    },
-    {
-        changeContentTo: "Button2",
-        icon: null,
-    },
-    {
-        changeContentTo: "Button3",
-        icon: null,
-    }
-]
+const menuElements = [{
+    changeContentTo: "con1", icon: null,
+}, {
+    changeContentTo: "con2", icon: null,
+}, {
+    changeContentTo: "con3", icon: null,
+}]
 
-function Navigation({onButtonClickHandler}) {
-    return <>
-        {navElements.map(element => {
-            return <button key={element.changeContentTo} onClick={() => {
-                onButtonClickHandler(element.changeContentTo)
-            }}>{element.changeContentTo}</button>
+function Navigation({handleClickButton}) {
+    return <nav className={styles.nav}>
+        {menuElements.map(element => {
+            return <Button key={element.changeContentTo}
+                           onClick={() => handleClickButton(element.changeContentTo)}>{element.changeContentTo}</Button>
         })}
-    </>
+    </nav>
 }
 
 Navigation.propTypes = {
-    onButtonClickHandler: PropTypes.func,
+    handleClickButton: PropTypes.func,
 }
 
-export default CSSModules(Navigation, styles);
+export default Navigation
