@@ -1,10 +1,30 @@
-@import "scss/colors";
+@import "scss/globals";
 
 #root {
   display: flex;
   flex-flow: row-reverse nowrap;
   width: 100dvw;
   height: 100dvh;
+
+  .profile-picture {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 59px;
+    background-color: $c_tint-yellow;
+    box-shadow: $s_drop-shadow;
+    overflow: hidden;
+
+    img {
+      width: 50px;
+      flex-shrink: 0;
+    }
+  }
 
   main {
     display: flex;
