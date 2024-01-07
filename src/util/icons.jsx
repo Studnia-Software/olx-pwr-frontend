@@ -7,7 +7,8 @@ import chat from "/src/assets/icons/Chat.png"
 
 const ICONS = {
     home: home,
-    search: search, error: error,
+    search: search,
+    error: error,
     notification: notification,
     compass: compass,
     chat: chat,

@@ -1,21 +1,53 @@
 import './App.scss'
 import Navigation from "./components/Navigation/Navigation.jsx";
 import {useState} from "react";
-import CONTENT_PAGES from "./util/content-pages.jsx";
 // images
 import profilePicture from "/src/assets/profile.png"
 
+// subpages
+//
+
+function contentPage(actualContentName, setActualContentName) {
+    let content;
+
+    switch (actualContentName) {
+        case "home":
+            content = "Home";
+            break;
+        case "search":
+            content = "Search";
+            break;
+        case "error":
+            content = "Error";
+            break;
+        case "notification":
+            content = "Notification";
+            break;
+        case "compass":
+            content = "Compass";
+            break;
+        case "chat":
+            content = "Chat";
+            break;
+        default:
+            setActualContentName("home");
+            break;
+    }
+
+    return content;
+}
+
 function App() {
-    const [actualContent, setActualContent] = useState("");
+    const [actualContentName, setActualContentName] = useState("");
 
     return (
         <>
             <div className="profile-picture">
                 <img src={profilePicture} alt={"profile picture"}/>
             </div>
-            <Navigation actualContent={actualContent} handleClickButton={setActualContent}></Navigation>
+            <Navigation actualContentName={actualContentName} handleClickButton={setActualContentName}></Navigation>
             <main>
-                {CONTENT_PAGES[actualContent] || CONTENT_PAGES["home"]}
+                {contentPage(actualContentName, setActualContentName)}
             </main>
         </>
     )
