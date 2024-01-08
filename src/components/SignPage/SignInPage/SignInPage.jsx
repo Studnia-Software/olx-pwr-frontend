@@ -12,15 +12,16 @@ function SignInPage({handleChangeForm}) {
                 <img src={ICONS.github} alt="github"/>
                 <img src={ICONS.google} alt="google"/>
             </div>
-            <input type="text" name="login" id="login"/>
-            <input type="password" name="password" id="password"/>
+            <input type="text" name="login" id="login" placeholder="login"/>
+            <input type="password" name="password" id="password" placeholder="password"/>
             <TextButton>sign in</TextButton>
         </section>
-        <section className={styles.signUpSection}>
+        <section className="signUpSection">
             <h1>welcome back.</h1>
             <h3>log in and see what you’ve missed</h3>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             <span>don't have an account?</span>
-            <TextButton>sign up</TextButton>
+            <TextButton onClick={() => handleChangeForm("sign-up")}>sign up</TextButton>
         </section>
     </div>
 }
