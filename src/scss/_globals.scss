@@ -10,5 +10,6 @@ $c_tint-violet-dark: #6839EC;
 $c_tint-yellow: #E7D735;
 
 // shadows
-$s_drop-shadow: 2.1789321899414062px 2.1789321899414062px 6.536797046661377px 0px rgba(174, 174, 192, 0.4), -2.1789321899414062px -2.1789321899414062px 6.536797046661377px 0px rgba(255, 255, 255, 1);
-$s_inner-shadow: -4px -4px 14px 0px rgba(255, 255, 255, 1), 0px 2px 4px 0px rgba(164, 174, 183, 0.25) inset;
+$s_drop-shadow: 2.1789321899414062px 2.1789321899414062px 6.536797046661377px 0px rgba(174, 174, 192, 0.4), -2.1789321899414062px -2.1789321899414062px 6.536797046661377px 0px rgba(255, 255, 255, 1), 0px 0px 0px 0px rgba(255, 255, 255, 1), 0px 0px 0px 0px rgba(164, 174, 183, 0.25) inset;
+$s_drop-shadow-dark: 2.179px 2.179px 6.537px 0px rgba(174, 174, 192, 0.40), -2.179px -2.179px 6.537px 0px #FFF, 0px 0px 0px 0px rgba(255, 255, 255, 1), 0px 0px 0px 0px rgba(164, 174, 183, 0.25) inset;
+$s_inner-shadow: 0px 0px 0px 0px rgba(174, 174, 192, 0.4), 0px 0px 0px 0px rgba(255, 255, 255, 1), -4px -4px 14px 0px rgba(255, 255, 255, 1), 0px 2px 4px 0px rgba(164, 174, 183, 0.25) inset;

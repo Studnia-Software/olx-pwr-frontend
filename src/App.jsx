@@ -52,7 +52,7 @@ function App() {
             <main>
                 {contentPage(currentContentName, setCurrentContentName)}
             </main>
-        </> : <SignPage></SignPage>}
+        </> : <SignPage/>}
     </>
 }
 

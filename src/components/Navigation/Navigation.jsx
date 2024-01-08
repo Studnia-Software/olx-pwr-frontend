@@ -17,11 +17,11 @@ const menuElements = [{
     changeContentTo: "chat", icon: ICONS.chat
 }]
 
-function Navigation({handleClickButton, currentContentPage}) {
+function Navigation({handleClickButton, currentContentName}) {
     return <nav className={styles.nav}>
         {menuElements.map(element => {
             return <NavButton key={element.changeContentTo} image={element.icon}
-                              active={element.changeContentTo === currentContentPage || (!currentContentPage && element.changeContentTo === "home")}
+                              active={element.changeContentTo === currentContentName || (!currentContentName && element.changeContentTo === "home")}
                               onClick={() => handleClickButton(element.changeContentTo)}>
                 {element.changeContentTo}
             </NavButton>
@@ -31,7 +31,7 @@ function Navigation({handleClickButton, currentContentPage}) {
 
 Navigation.propTypes = {
     handleClickButton: PropTypes.func,
-    currentContentPage: PropTypes.string
+    currentContentName: PropTypes.string
 }
 
 export default Navigation

@@ -1,3 +1,11 @@
-.formContainer {
+@import "src/scss/globals";
 
+.formContainer {
+  display: flex;
+  flex-flow: nowrap row;
+  max-width: 1280px;
+  max-height: 864px;
+  border-radius: 50px;
+  background: $c_main-white;
+  box-shadow: $s_drop-shadow-dark;
 }
