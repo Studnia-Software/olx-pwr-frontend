@@ -1,6 +1,6 @@
 import styles from "./Navigation.module.scss"
 import PropTypes from "prop-types";
-import Button from "../global/Button/Button.jsx";
+import NavButton from "../global/NavButton/NavButton.jsx";
 import ICONS from "../../util/icons.jsx";
 
 const menuElements = [{
@@ -17,21 +17,21 @@ const menuElements = [{
     changeContentTo: "chat", icon: ICONS.chat
 }]
 
-function Navigation({handleClickButton, actualContentName}) {
+function Navigation({handleClickButton, currentContentPage}) {
     return <nav className={styles.nav}>
         {menuElements.map(element => {
-            return <Button key={element.changeContentTo} image={element.icon}
-                           active={element.changeContentTo === actualContentName || (!actualContentName && element.changeContentTo === "home")}
-                           onClick={() => handleClickButton(element.changeContentTo)}>
+            return <NavButton key={element.changeContentTo} image={element.icon}
+                              active={element.changeContentTo === currentContentPage || (!currentContentPage && element.changeContentTo === "home")}
+                              onClick={() => handleClickButton(element.changeContentTo)}>
                 {element.changeContentTo}
-            </Button>
+            </NavButton>
         })}
     </nav>
 }
 
 Navigation.propTypes = {
     handleClickButton: PropTypes.func,
-    actualContentName: PropTypes.string
+    currentContentPage: PropTypes.string
 }
 
 export default Navigation

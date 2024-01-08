@@ -1,16 +1,19 @@
 import './App.scss'
-import Navigation from "./components/Navigation/Navigation.jsx";
 import {useState} from "react";
+import Navigation from "./components/Navigation/Navigation.jsx";
+import SignPage from "./components/SignPage/SignPage.jsx";
 // images
 import profilePicture from "/src/assets/profile.png"
 
-// subpages
-//
+let response;
 
-function contentPage(actualContentName, setActualContentName) {
+function contentPage(currentContentName, setCurrentContentName) {
     let content;
 
-    switch (actualContentName) {
+    switch (currentContentName) {
+        case "profile":
+            content = "Profile";
+            break;
         case "home":
             content = "Home";
             break;
@@ -30,7 +33,7 @@ function contentPage(actualContentName, setActualContentName) {
             content = "Chat";
             break;
         default:
-            setActualContentName("home");
+            setCurrentContentName("home");
             break;
     }
 
@@ -38,19 +41,19 @@ function contentPage(actualContentName, setActualContentName) {
 }
 
 function App() {
-    const [actualContentName, setActualContentName] = useState("");
+    const [currentContentName, setCurrentContentName] = useState("");
 
-    return (
-        <>
-            <div className="profile-picture">
+    return <>
+        {response ? <>
+            <div className="profile-picture" onClick={() => setCurrentContentName("profile")}>
                 <img src={profilePicture} alt={"profile picture"}/>
             </div>
-            <Navigation actualContentName={actualContentName} handleClickButton={setActualContentName}></Navigation>
+            <Navigation currentContentName={currentContentName} handleClickButton={setCurrentContentName}></Navigation>
             <main>
-                {contentPage(actualContentName, setActualContentName)}
+                {contentPage(currentContentName, setCurrentContentName)}
             </main>
-        </>
-    )
+        </> : <SignPage></SignPage>}
+    </>
 }
 
 export default App
