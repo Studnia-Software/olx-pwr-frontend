@@ -1,0 +1,10 @@
+@import "src/scss/globals";
+
+.signInPage {
+  section {
+    &:nth-of-type(2) {
+      background-color: $c_tint-yellow;
+      color: $c_tint-violet-dark;
+    }
+  }
+}

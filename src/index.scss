@@ -1,0 +1,23 @@
+@import "scss/globals";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+  font-size: clamp(14px, 1.5dvw, 16px);
+  font-family: 'Outfit', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: $c_main-white;
+  color: $c_text-base;
+}

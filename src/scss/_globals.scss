@@ -1,0 +1,15 @@
+// colors
+$c_main-white: #F0F0F3;
+$c_main-bg-alt: #F1EEF6;
+$c_text-separator: #A4AEB700;
+$c_text-base: #A4AEB7;
+$c_text-dark: #728AB7;
+$c_text-highlight: #AEA7D9B2;
+$c_tint-violet-light: #7E4EFC;
+$c_tint-violet-dark: #6839EC;
+$c_tint-yellow: #E7D735;
+
+// shadows
+$s_drop-shadow: 0.14rem 0.14rem 0.4rem 0px rgba(174, 174, 192, 0.4), -0.14rem -0.14rem 0.4rem 0px rgba(255, 255, 255, 1), 0px 0px 0px 0px rgba(255, 255, 255, 1), 0px 0px 0px 0px rgba(164, 174, 183, 0.25) inset;
+$s_drop-shadow-dark: 0.14rem 0.14rem 0.4rem 0px rgba(174, 174, 192, 0.40), -0.14rem -0.14rem 0.4rem 0px #FFF, 0px 0px 0px 0px rgba(255, 255, 255, 1), 0px 0px 0px 0px rgba(164, 174, 183, 0.25) inset;
+$s_inner-shadow: 0px 0px 0px 0px rgba(174, 174, 192, 0.4), 0px 0px 0px 0px rgba(255, 255, 255, 1), -0.25rem -0.25rem 0.9rem 0px rgba(255, 255, 255, 1), 0px 0.13rem 0.25rem 0px rgba(164, 174, 183, 0.25) inset;

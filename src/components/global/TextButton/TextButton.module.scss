@@ -1,0 +1,19 @@
+@import "src/scss/globals";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 3.13rem;
+  border: 0;
+  border-radius: 3.13rem;
+  background: var(--tint-violet-dark, #6839EC);
+  font-size: 1.56rem;
+  font-family: 'Outfit', sans-serif;
+  color: $c_main-white;
+}
+
+.altColor {
+  background-color: $c_tint-yellow;
+  color: $c_tint-violet-dark;
+}
