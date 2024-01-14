@@ -60,6 +60,7 @@
     background-color: $c_tint-yellow;
     box-shadow: $s_drop-shadow;
     overflow: hidden;
+    cursor: pointer;
 
     img {
       width: 3.2rem;
@@ -74,5 +75,13 @@
     width: 100%;
     height: 100%;
     padding: 5rem;
+  }
+}
+
+@media screen and (max-width: $v_mobile-width) {
+  #root {
+    main {
+      padding: 0;
+    }
   }
 }

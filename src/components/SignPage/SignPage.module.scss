@@ -38,7 +38,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: $v_mobile-width) {
   .formContainer {
     > form {
       grid-template-columns: 1fr;
@@ -46,7 +46,7 @@
   }
 }
 
-@media screen and (max-width: 768px) and (max-height: 900px) {
+@media screen and (max-width: $v_mobile-width) and (max-height: $v_scroll-height) {
   .formContainer {
     width: 100dvw;
     height: 100dvh;
