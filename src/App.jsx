@@ -42,7 +42,7 @@ function contentPage(currentContentName, setCurrentContentName) {
 }
 
 function App() {
-    const [currentContentName, setCurrentContentName] = useState("");
+    const [currentContentName, setCurrentContentName] = useState("Home");
 
     return <>
         {response ? <>
