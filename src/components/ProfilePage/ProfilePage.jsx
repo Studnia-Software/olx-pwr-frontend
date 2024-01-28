@@ -1,11 +1,13 @@
 import styles from "./ProfilePage.module.scss"
+import profilePicture from "/src/assets/profile.png"
+import headerImage from "/src/assets/header.png"
 
 function ProfilePage() {
     return <div className={styles.profileContainer}>
-        <img className={styles.headerImage} src="/src/assets/header.png" alt="header image"/>
+        <img className={styles.headerImage} src={headerImage} alt="header image"/>
         <div className={styles.infoCon}>
             <div className={styles.profilePicture}>
-                <img src="/src/assets/profile.png" alt="profile picture"/>
+                <img src={profilePicture} alt="profile picture"/>
             </div>
         </div>
     </div>
