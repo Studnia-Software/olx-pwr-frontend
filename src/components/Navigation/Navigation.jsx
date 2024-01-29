@@ -1,7 +1,7 @@
 import styles from "./Navigation.module.scss"
 import PropTypes from "prop-types";
-import NavButton from "../global/NavButton/NavButton.jsx";
 import ICONS from "../../util/icons.jsx";
+import Button from "../global/Button/Button.jsx";
 
 const menuElements = [{
     changeContentTo: "home", icon: ICONS.home,
@@ -20,11 +20,12 @@ const menuElements = [{
 function Navigation({handleClickButton, currentContentName}) {
     return <nav className={styles.nav}>
         {menuElements.map(element => {
-            return <NavButton key={element.changeContentTo} image={element.icon}
-                              active={element.changeContentTo === currentContentName || (!currentContentName && element.changeContentTo === "home")}
-                              onClick={() => handleClickButton(element.changeContentTo)}>
-                {element.changeContentTo}
-            </NavButton>
+            return <Button key={element.changeContentTo}
+                           style={"nav"}
+                           active={element.changeContentTo === currentContentName || (!currentContentName && element.changeContentTo === "home")}
+                           onClick={() => handleClickButton(element.changeContentTo)}>
+                <img src={element.icon} alt={element.changeContentTo}/>
+            </Button>
         })}
     </nav>
 }

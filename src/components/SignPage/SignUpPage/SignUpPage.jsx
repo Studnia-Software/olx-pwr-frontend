@@ -1,6 +1,6 @@
 import styles from "./SignUpPage.module.scss"
 import PropTypes from "prop-types";
-import TextButton from "../../global/TextButton/TextButton.jsx";
+import Button from "../../global/Button/Button.jsx";
 
 function SignUpPage({handleChangeForm}) {
     return <form method="post" className={styles.signInPage}>
@@ -10,7 +10,7 @@ function SignUpPage({handleChangeForm}) {
             <input type="email" name="email" id="email" placeholder="email"/>
             <input type="password" name="password" id="password" placeholder="password"/>
             <input type="password" name="c-password" id="c-password" placeholder="confirm password"/>
-            <TextButton altColor={true}>sign in</TextButton>
+            <Button style={"yellow"}>sign in</Button>
         </section>
         <section>
             <div>
@@ -19,7 +19,7 @@ function SignUpPage({handleChangeForm}) {
             </div>
             <div>
                 <h4>already have an account?</h4>
-                <TextButton onClick={() => handleChangeForm("sign-in")}>sign in</TextButton>
+                <Button style={"purple"} onClick={() => handleChangeForm("sign-in")}>sign in</Button>
             </div>
         </section>
     </form>

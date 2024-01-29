@@ -14,21 +14,4 @@
   display: flex;
   flex-flow: nowrap row;
   justify-content: space-evenly;
-
-  img {
-    width: 3.2rem;
-    padding: 0.5rem;
-    border-radius: 50%;
-    box-shadow: $s_drop-shadow;
-    transition: box-shadow 0.1s;
-    cursor: pointer;
-
-    &:hover {
-      box-shadow: none;
-    }
-
-    &:active {
-      box-shadow: $s_inner-shadow;
-    }
-  }
 }
