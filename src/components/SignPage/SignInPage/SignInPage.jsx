@@ -8,13 +8,15 @@ function SignInPage({handleChangeForm}) {
         <section>
             <h2>sign in</h2>
             <div className={styles.social}>
-                <img src={ICONS.facebook} alt="facebook"/>
-                <img src={ICONS.google} alt="google"/>
-                <img src={ICONS.github} alt="github"/>
+                <img src={ICONS.facebook} alt="facebook" aria-label={"Facebook"}/>
+                <img src={ICONS.google} alt="google" aria-label={"Google"}/>
+                <img src={ICONS.github} alt="github" aria-label={"Github"}/>
             </div>
-            <input type="text" name="login" id="login" placeholder="login"/>
-            <input type="password" name="password" id="password" placeholder="password"/>
-            <TextButton>sign in</TextButton>
+            <input type="text" name="login" id="login" placeholder="login" aria-label="login"
+                   autoComplete={"username"}/>
+            <input type="password" name="password" id="password" placeholder="password" aria-label="password"
+                   autoComplete={"current-password"}/>
+            <TextButton aria-label={"sign in"}>sign in</TextButton>
         </section>
         <section>
             <div>
@@ -24,7 +26,8 @@ function SignInPage({handleChangeForm}) {
             <div>
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <h4>don't have an account?</h4>
-                <TextButton altColor={true} onClick={() => handleChangeForm("sign-up")}>sign up</TextButton>
+                <TextButton altColor={true}
+                            onClick={() => handleChangeForm("sign-up")} aria-label={"sign up page"}>sign up</TextButton>
             </div>
         </section>
     </form>
