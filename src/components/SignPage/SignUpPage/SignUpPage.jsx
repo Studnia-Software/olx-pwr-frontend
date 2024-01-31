@@ -1,6 +1,6 @@
 import styles from "./SignUpPage.module.scss"
 import PropTypes from "prop-types";
-import TextButton from "../../global/TextButton/TextButton.jsx";
+import Button from "../../global/Button/Button.jsx";
 
 function SignUpPage({handleChangeForm}) {
     return <form method="post" className={styles.signInPage}>
@@ -20,7 +20,7 @@ function SignUpPage({handleChangeForm}) {
             <input type="password" name="c-password" id="c-password" placeholder="confirm password" minLength={5}
                    maxLength={25}
                    aria-label={"confirm password"} autoComplete={"new-password"}/>
-            <TextButton altColor={true} aria-label={"sign up"}>sign up</TextButton>
+            <Button style={"yellow"} aria-label={"sign up"}>sign up</Button>
         </section>
         <section>
             <div>
@@ -29,7 +29,7 @@ function SignUpPage({handleChangeForm}) {
             </div>
             <div>
                 <h4>already have an account?</h4>
-                <TextButton onClick={() => handleChangeForm("sign-in")} aria-label={"sign in page"}>sign in</TextButton>
+                <Button style={"purple"} onClick={() => handleChangeForm("sign-in")} aria-label={"sign in page"}>sign in</Button>
             </div>
         </section>
     </form>

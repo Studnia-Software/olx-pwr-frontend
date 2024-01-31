@@ -1,0 +1,65 @@
+@import "/src/scss/globals";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 0.6rem 3rem;
+  border-radius: 3rem;
+  font-size: 1.5rem;
+  font-family: 'Outfit', sans-serif;
+  border: 0;
+  cursor: pointer;
+}
+
+.shadowButton {
+  padding: 0.6rem;
+  background: $c_main-white;
+  box-shadow: $s_drop-shadow;
+  transition: box-shadow 0.1s;
+
+  img {
+    max-width: 2.4rem;
+  }
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:active {
+    box-shadow: $s_inner-shadow;
+  }
+}
+
+.navButton {
+  @extend .shadowButton;
+  width: 3.2rem;
+  height: 3.2rem;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+
+  img {
+    width: 2.5rem;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+  }
+}
+
+.purpleButton {
+  background: var(--tint-violet-dark, #6839EC);
+  color: $c_main-white;
+}
+
+.yellowButton {
+  background-color: $c_tint-yellow;
+  color: $c_tint-violet-dark;
+}
+
+.active {
+  box-shadow: $s_inner-shadow;
+
+  &:hover {
+    box-shadow: $s_inner-shadow !important;
+  }
+}

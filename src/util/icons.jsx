@@ -7,6 +7,7 @@ import chat from "/src/assets/icons/Chat.png"
 import facebook from "/src/assets/icons/Facebook.svg"
 import github from "/src/assets/icons/GitHub.png"
 import google from "/src/assets/icons/Google.png"
+import twitter from "/src/assets/icons/Twitter.svg"
 
 const ICONS = {
     home: home,
@@ -18,6 +19,7 @@ const ICONS = {
     facebook: facebook,
     github: github,
     google: google,
+    twitter: twitter,
 }
 
 export default ICONS;

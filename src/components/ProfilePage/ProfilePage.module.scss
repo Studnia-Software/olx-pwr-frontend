@@ -1,0 +1,38 @@
+@import "/src/scss/globals";
+
+.profileContainer {
+  border-radius: 2rem;
+  box-shadow: $s_drop-shadow;
+  overflow: hidden;
+}
+
+.headerImage {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.infoCon {
+  position: relative;
+  min-height: 20rem;
+}
+
+.profilePicture {
+  position: relative;
+  top: -3rem;
+  left: 0.6rem;
+  padding: 0.6rem;
+  width: 6rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 3rem;
+  background-color: $c_main-white;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    border-radius: 3rem;
+    box-shadow: $s_drop-shadow;
+  }
+}
