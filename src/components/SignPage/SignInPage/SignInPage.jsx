@@ -8,13 +8,15 @@ function SignInPage({handleChangeForm}) {
         <section>
             <h2>sign in</h2>
             <div className={styles.social}>
-                <Button style={"shadow"}><img src={ICONS.facebook} alt="facebook"/></Button>
-                <Button style={"shadow"}><img src={ICONS.google} alt="google"/></Button>
-                <Button style={"shadow"}><img src={ICONS.github} alt="github"/></Button>
+                <Button style={"shadow"} aria-label={"Facebook"}><img src={ICONS.facebook} alt="facebook"/></Button>
+                <Button style={"shadow"} aria-label={"Google"}><img src={ICONS.google} alt="google"/></Button>
+                <Button style={"shadow"} aria-label={"Github"}><img src={ICONS.github} alt="github"/></Button>
             </div>
-            <input type="text" name="login" id="login" placeholder="login"/>
-            <input type="password" name="password" id="password" placeholder="password"/>
-            <Button style={"purple"}>sign in</Button>
+            <input type="text" name="login" id="login" placeholder="login" aria-label="login"
+                   autoComplete={"username"}/>
+            <input type="password" name="password" id="password" placeholder="password" aria-label="password"
+                   autoComplete={"current-password"}/>
+            <Button style={"purple"} aria-label={"sign in"}>sign in</Button>
         </section>
         <section>
             <div>
@@ -24,7 +26,7 @@ function SignInPage({handleChangeForm}) {
             <div>
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <h4>don't have an account?</h4>
-                <Button style={"yellow"} onClick={() => handleChangeForm("sign-up")}>sign up</Button>
+                <Button style={"yellow"} onClick={() => handleChangeForm("sign-up")} aria-label={"sign up page"}>sign up</Button>
             </div>
         </section>
     </form>
