@@ -1,38 +1,40 @@
 import styles from "./Navigation.module.scss"
-import PropTypes from "prop-types";
-import ICONS from "../../util/icons.jsx";
 import Button from "../global/Button/Button.jsx";
+import {NavLink} from "react-router-dom";
+import ICONS from "../../util/icons.jsx";
+import PropTypes from "prop-types";
 
 const menuElements = [{
-    changeContentTo: "home", icon: ICONS.home,
+    changeContentTo: "/", icon: ICONS.home,
 }, {
-    changeContentTo: "search", icon: ICONS.search,
+    changeContentTo: "/search", icon: ICONS.search,
 }, {
-    changeContentTo: "error", icon: ICONS.error,
+    changeContentTo: "/error", icon: ICONS.error,
 }, {
-    changeContentTo: "notification", icon: ICONS.notification
+    changeContentTo: "/notification", icon: ICONS.notification
 }, {
-    changeContentTo: "compass", icon: ICONS.compass
+    changeContentTo: "/compass", icon: ICONS.compass
 }, {
-    changeContentTo: "chat", icon: ICONS.chat
+    changeContentTo: "/chat", icon: ICONS.chat
 }]
 
-function Navigation({handleClickButton, currentContentName}) {
+function Navigation({actualPage, handleSetActualPage}) {
     return <nav className={styles.nav}>
         {menuElements.map(element => {
-            return <Button key={element.changeContentTo}
-                           style={"nav"}
-                           active={element.changeContentTo === currentContentName || (!currentContentName && element.changeContentTo === "home")}
-                           onClick={() => handleClickButton(element.changeContentTo)}>
-                <img src={element.icon} alt={element.changeContentTo}/>
-            </Button>
+            return <NavLink key={element.changeContentTo} to={element.changeContentTo}
+                            onClick={() => handleSetActualPage(element.changeContentTo)}>
+                <Button style={"nav"}
+                        active={actualPage === element.changeContentTo}>
+                    <img src={element.icon} alt={element.changeContentTo}/>
+                </Button>
+            </NavLink>
         })}
     </nav>
 }
 
 Navigation.propTypes = {
-    handleClickButton: PropTypes.func,
-    currentContentName: PropTypes.string
+    actualPage: PropTypes.string,
+    handleSetActualPage: PropTypes.func,
 }
 
 export default Navigation
