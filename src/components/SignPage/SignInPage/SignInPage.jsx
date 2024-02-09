@@ -1,9 +1,9 @@
 import styles from "./SignInPage.module.scss"
-import PropTypes from "prop-types";
 import ICONS from "../../../util/icons.jsx";
 import Button from "../../global/Button/Button.jsx";
+import {Link} from "react-router-dom";
 
-function SignInPage({handleChangeForm}) {
+function SignInPage() {
     return <form method="post" className={styles.signInPage}>
         <section>
             <h2>sign in</h2>
@@ -26,14 +26,10 @@ function SignInPage({handleChangeForm}) {
             <div>
                 {/* eslint-disable-next-line react/no-unescaped-entities */}
                 <h4>don't have an account?</h4>
-                <Button style={"yellow"} onClick={() => handleChangeForm("sign-up")} aria-label={"sign up page"}>sign up</Button>
+                <Link to="/sign-up"><Button style={"yellow"} aria-label={"sign up page"}>sign up</Button></Link>
             </div>
         </section>
     </form>
-}
-
-SignInPage.propTypes = {
-    handleChangeForm: PropTypes.func,
 }
 
 export default SignInPage;

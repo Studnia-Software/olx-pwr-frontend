@@ -1,8 +1,8 @@
 import styles from "./SignUpPage.module.scss"
-import PropTypes from "prop-types";
 import Button from "../../global/Button/Button.jsx";
+import {Link} from "react-router-dom";
 
-function SignUpPage({handleChangeForm}) {
+function SignUpPage() {
     return <form method="post" className={styles.signInPage}>
         <section>
             <h2>create account</h2>
@@ -29,14 +29,10 @@ function SignUpPage({handleChangeForm}) {
             </div>
             <div>
                 <h4>already have an account?</h4>
-                <Button style={"purple"} onClick={() => handleChangeForm("sign-in")} aria-label={"sign in page"}>sign in</Button>
+                <Link to="/sign-in"><Button style={"purple"} aria-label={"sign in page"}>sign in</Button></Link>
             </div>
         </section>
     </form>
-}
-
-SignUpPage.propTypes = {
-    handleChangeForm: PropTypes.func,
 }
 
 export default SignUpPage;
