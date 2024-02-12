@@ -18,11 +18,10 @@ const menuElements = [{
     changeContentTo: "/chat", icon: ICONS.chat
 }]
 
-function Navigation({actualPage, handleSetActualPage}) {
+function Navigation({actualPage}) {
     return <nav className={styles.nav}>
         {menuElements.map(element => {
-            return <NavLink key={element.changeContentTo} to={element.changeContentTo}
-                            onClick={() => handleSetActualPage(element.changeContentTo)}>
+            return <NavLink key={element.changeContentTo} to={element.changeContentTo}>
                 <Button style={"nav"}
                         active={actualPage === element.changeContentTo}>
                     <img src={element.icon} alt={element.changeContentTo}/>
@@ -34,7 +33,6 @@ function Navigation({actualPage, handleSetActualPage}) {
 
 Navigation.propTypes = {
     actualPage: PropTypes.string,
-    handleSetActualPage: PropTypes.func,
 }
 
 export default Navigation
